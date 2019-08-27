@@ -34,3 +34,16 @@ var point = Point()
 
 // 正确
 var point = new Point()
+
+// 立即执行 class
+let person = new class {
+  constructor(name) {
+    this.name = name
+  }
+
+  sayName() {
+    console.log(this.name)
+  }
+}('张三')
+
+person.sayName() // 张三
